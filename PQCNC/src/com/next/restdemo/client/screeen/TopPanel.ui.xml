@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:image field='google_logo' src='resources/images/noImage.jpg' />
+	<ui:style>
+		.statusDiv {
+			text-align: right;
+			margin: 1em;
+		}
+		
+		.linksDiv {
+			text-align: right;
+		}
+		
+	
+		@sprite .googlelogo {
+			gwt-image: 'google_logo';
+			width: 35px;
+			height: 35px;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<div
+			style="width:auto;height:40px;min-width:750px;border-bottom: 2px solid black;">
+			<div>
+				<div>
+					<div style="float:left;width:35px;height:35px;">
+						<g:Image  styleName="{style.googlelogo}"/>
+					</div>
+					<div
+						style="float: left; font-family: verdana; font-size: 20px; line-height: 35px; margin-left: 10px;">Perinatal Quality Collaboration of North Carolina</div>
+				</div>
+				<div style="float:right">
+					<div style="line-height:35px;">
+						<g:Button ui:field="buttonSignup" text="Signup" />
+						<g:Button ui:field="buttonLogin" text="Login" />
+						<g:Button ui:field="buttonHelp" text="Help" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

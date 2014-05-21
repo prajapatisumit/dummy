@@ -1,0 +1,82 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.lblHeader {
+			float: left;
+			margin-left: 24px;
+			width: 88px;
+		}
+		
+		.buttonPanel {
+			text-align: center;
+		}
+		
+		.mainPanel {
+			margin-left: 35%;
+			/*margin-right: -285px*/;
+			margin-top: 5%;
+			width: 424px;
+			position: relative;
+		}
+		
+		.form {
+			border: 1px solid #7B8E8F;
+			background-color: whitesmoke;
+			color: white;
+			font: 13px Georgia, "Times New Roman", Times, serif;
+			margin: 30px;
+			padding: 10px 20px;
+		}
+		
+		.formChild {
+			color: black;
+			margin-top: 9px;
+			padding: 7px;
+		}
+		
+		.textBoxWidth {
+			width: 150px;
+		}
+		
+		.lblError {
+			margin-left: 112px;
+			color: red;
+		}
+	</ui:style>
+	<g:HTMLPanel>	
+		<div class="{style.mainPanel}">
+			<div class="{style.form}">
+
+				<div class="{style.formChild}">
+
+					<div class="{style.lblHeader}">
+						<label>User eMail</label>
+					</div>
+					<g:TextBox ui:field="userEmail" name="userEmail"
+						styleName="{style.textBoxWidth}" text="" />
+					<span>
+						<g:Label ui:field="userEmailError" styleName="{style.lblError}" />
+					</span>
+				</div>
+				<div class="{style.formChild}">
+					<div class="{style.lblHeader}">
+						<label>Password</label>
+					</div>
+					<g:PasswordTextBox ui:field="password" name="password"
+						styleName="{style.textBoxWidth}" text="" />
+					<span>
+						<g:Label ui:field="passwordError" styleName="{style.lblError}" />
+					</span>
+				</div>
+
+				<div class="{style.formChild}">
+					<div class="{style.buttonPanel}">
+						<g:Button ui:field="buttonLogin" text="Login" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="border: 3px solid; height: 320px;">hello</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 
